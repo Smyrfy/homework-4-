@@ -43,6 +43,7 @@ void spiralMatrix(int rows, int cols) {
     }
 }
 
+
 int main() {
     int rows, cols;
     
