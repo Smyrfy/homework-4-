@@ -1,15 +1,24 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main() {
-    int width, height;
-    cin >> width >> height;
+int main(){
+        int rs = 0;
+        int cs = 0;
+        char sm;
 
-    for(int i = 0; i < height; i++) {
-        for(int j = 0; j < width; j++) 
-            cout << "*";
-        cout << "\n";
-    }
+        cout << "length: ";
+        cin >> rs;
+        cout << "width: ";
+        cin >> cs;
+        cout << "symbol: ";
+        cin >> sm;
 
-    return 0;
+        for(int i = 0; i < rs; i++){
+                for(int u = 0; u < cs; u++)
+                {
+                        cout << sm << " ";
+                }
+                cout << endl;
+        }
 }
+
