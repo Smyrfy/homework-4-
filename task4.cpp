@@ -1,32 +1,32 @@
 #include <iostream>
 using namespace std;
 
-void print_diamond(int n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < (n - i - 1); j++) {
-            cout << " ";
-        }
-        for (int j = 0; j < (i + 1); j++) {
-            cout << "* ";
-        }
-        cout << endl;
-    }
-    for (int i = 0; i < (n - 1); i++) {
-        for (int j = 0; j < (i + 1); j++) {
-            cout << " ";
-        }
-        for (int j = 0; j < (n - i - 1); j++) {
-            cout << "* ";
-        }
-        cout << endl;
-    }
-}
-
 int main() {
-    int n;
-    cout << "Enter the size of the diamond: ";
-    cin >> n;
-    print_diamond(n);
+    int a;
+    
+	 cout << "height: ";
+	cin >> a;
+    
+    
+	for (int i = 1; i <= a; i++){
+        for (int j = 1; j <= a - i; j++){
+            cout << " ";
+        }
+          for (int j = 1; j <= 2 * i - 1; j++){
+            cout << "*";
+          }
+        cout << endl;
+	}
+    
+      for (int i = a - 1; i >= 1; i--){
+          for (int j = 1; j <= a - i; j++){
+            cout << " ";
+        }
+        for (int j = 1; j <= 2 * i - 1; j++){
+            cout << "*";
+        }
+        cout << endl;
+	}
+
     return 0;
 }
-
