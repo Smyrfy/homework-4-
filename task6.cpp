@@ -6,13 +6,10 @@ int main() {
 	std::cout << "Enter coefficients a, b, c: ";
 	std::cin >> a >> b >> c;
 
-    // 1) Not an equation
-
 	if (a == 0 && b == 0 && c == 0) {
 		std::cout << "This is not an equation (infinitely many solutions).";
     }
-    // 2) Not a quadratic equation
-
+   
 	else if (a == 0) {
 		if (b == 0) {
 			std::cout << "No solution (not an equation).";
@@ -22,11 +19,11 @@ int main() {
 	       		}
    		}
 		else {
-    // 3) It's quadratic → compute discriminant
+    //discriminant
 
 	D = b * b - 4 * a * c;
 
-    // 4) D > 0 → two roots
+    //D > 0
 
 	if (D > 0) {
 		double x1 = (-b + sqrt(D)) / (2 * a);
@@ -34,7 +31,7 @@ int main() {
 		std::cout << "D > 0, two roots: x1 = " << x1 << ", x2 = " << x2;
         }
 
-    // 5) D == 0 → one root
+    //D == 0
 
 	else if (D == 0) {
             	double x = -b / (2 * a);
@@ -42,7 +39,7 @@ int main() {
 
             } 
 
-    // 6) D < 0 → no real roots
+    //D < 0
  
 	else {
 		std::cout << "D < 0, no real roots.";
